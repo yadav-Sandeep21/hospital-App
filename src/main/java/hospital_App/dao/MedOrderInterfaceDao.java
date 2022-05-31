@@ -7,5 +7,6 @@ import hospital_App.dto.MedOrder;
 
 public interface MedOrderInterfaceDao {
 	public abstract MedOrder saveMedOrder(MedOrder medOrder);
-	public abstract double totalBill(List<Item> items);
+	public abstract MedOrder medOrderById(int id);
+	public abstract double totalBill(List<Item> items, MedOrder medOrder);
 }

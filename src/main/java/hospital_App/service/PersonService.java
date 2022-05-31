@@ -2,15 +2,19 @@ package hospital_App.service;
 
 import java.util.List;
 
+import hospital_App.dao.PersonDao;
 import hospital_App.dto.Person;
 
 public class PersonService {
+	//Save Person Details
 	public Person savePerson(Person person) {
-		return null;
+		PersonDao personDao=new PersonDao();
+		return personDao.savePerson(person);
 	}
 
 	public Person getPersonById(int id) {
-		return null;
+		PersonDao personDao=new PersonDao();
+		return personDao.getPersonById(id);
 	}
 
 	public boolean updatePersonById(int id, Person person) {
@@ -18,10 +22,12 @@ public class PersonService {
 	}
 
 	public List<Person> getAllPerson() {
-		return null;
+		PersonDao personDao=new PersonDao();
+		return personDao.getAllPerson();
 	}
 
 	public Person deletePersonById(int id) {
-		return null;
+		PersonDao personDao=new PersonDao();
+		return personDao.deletePersonById(id);
 	}
 }

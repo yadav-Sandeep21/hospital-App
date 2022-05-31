@@ -1,10 +1,13 @@
 package hospital_App.service;
 
+import hospital_App.dao.ObservationDao;
 import hospital_App.dto.Observation;
 
 public class ObservationService {
+	//Save Observtion details
 	public Observation saveObservation(Observation observation) {
-		return null;
+		ObservationDao observationDao=new ObservationDao();
+		return observationDao.saveObservation(observation);
 	}
 
 	public boolean updateObservationById(int id, Observation observation) {
@@ -12,6 +15,7 @@ public class ObservationService {
 	}
 
 	public Observation getObservationById(int id) {
-		return null;
+		ObservationDao observationDao=new ObservationDao();
+		return observationDao.getObservationById(id);
 	}
 }

@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -15,8 +16,8 @@ public class Hospital {
 	private int hospitalId;
 	private String name;
 	private String gstNo;
-	@OneToMany
-	List<Branch> branch;
+	@OneToMany(mappedBy = "hospital")
+	private List<Branch> branch;
 	public int getHospitalId() {
 		return hospitalId;
 	}

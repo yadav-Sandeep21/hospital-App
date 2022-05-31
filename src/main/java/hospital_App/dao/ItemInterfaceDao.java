@@ -4,5 +4,5 @@ import hospital_App.dto.Item;
 
 public interface ItemInterfaceDao {
 	public abstract Item saveItem(Item item);
-	public abstract double calculateCost();
+	public abstract double calculateCost(double cost, int quantity);
 }

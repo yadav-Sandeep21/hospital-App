@@ -19,8 +19,8 @@ public class Person {
 	private long phone;
 	private String dob;
 	private String bloodGroup;
-	@OneToMany
-	private List<Branch> branch;
+	@OneToMany(mappedBy = "person")
+	private List<Encounter> encounter;
 	public int getPersonId() {
 		return personId;
 	}
@@ -63,10 +63,10 @@ public class Person {
 	public void setBloodGroup(String bloodGroup) {
 		this.bloodGroup = bloodGroup;
 	}
-	public List<Branch> getBranch() {
-		return branch;
+	public List<Encounter> getEncounter() {
+		return encounter;
 	}
-	public void setBranch(List<Branch> branch) {
-		this.branch = branch;
+	public void setEncounter(List<Encounter> encounter) {
+		this.encounter = encounter;
 	}
 }
